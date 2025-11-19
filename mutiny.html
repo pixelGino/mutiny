@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mutiny Labs empowers industry leaders and non-profits to innovate and reimagine leadership in the AI era. Fractional CIO expertise, rapid prototyping, and proven impact.">
+    <meta name="keywords" content="innovation, AI strategy, fractional CIO, digital transformation, non-profit technology">
+    <meta name="author" content="Juan C. Sánchez (Gino)">
+    <meta property="og:title" content="Mutiny Labs | Innovation & Strategy">
+    <meta property="og:description" content="De-risking the innovation process. Proven expertise with Mozilla, Microsoft, and Toyota.">
+    <meta property="og:image" content="logoM.png">
+    <meta name="theme-color" content="#535DA5">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mutiny Labs | Innovation & Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #535DA5;
+            --secondary: #47E2B9;
+            --light-secondary: #80FFD8;
+            --dark: #231F20;
+        }
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #121218;
+            color: white;
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #ffffff 0%, #80FFD8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-brand-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, #2A3055 100%);
+        }
+        /* Elegant Glitch Pattern for Dividers */
+        .glitch-divider {
+            height: 8px;
+            background-image: linear-gradient(90deg, 
+                var(--primary) 25%, 
+                var(--secondary) 25%, 
+                var(--secondary) 50%, 
+                var(--primary) 50%, 
+                var(--primary) 75%, 
+                var(--secondary) 75%, 
+                var(--secondary) 100%);
+            background-size: 40px 100%;
+            opacity: 0.8;
+        }
+        .glass-card {
+            background: rgba(83, 93, 165, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 226, 185, 0.2);
+        }
+        /* Accessibility & Interaction */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #47E2B9;
+            outline-offset: 2px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#121218]/90 backdrop-blur-md border-b border-[#535DA5]/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Mutiny Logo -->
+                    <img src="logoM.png" alt="Mutiny Labs Logo" class="h-10 w-auto">
+                    <span class="text-2xl font-bold text-white tracking-tight">mutiny<span class="text-[#47E2B9]">.</span></span>
+                </div>
+                <div>
+                    <a href="#contact" class="inline-flex items-center justify-center px-4 sm:px-6 py-2 border border-[#47E2B9] rounded-full text-xs sm:text-sm font-medium text-[#47E2B9] hover:bg-[#47E2B9] hover:text-[#231F20] transition-all duration-300">
+                        <span class="hidden sm:inline">Start the Rebellion</span>
+                        <span class="sm:hidden">Contact</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" style="background-image: url('Mutiny_Pattern_2.png'); background-repeat: repeat; background-size: auto;">
+        <!-- Abstract Background Element - Vibrant Gradient -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-[#7C63FF] opacity-40 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#00F0FF] opacity-35 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6" style="line-height: 1.2;">
+                    <span style="background-color: #000000; padding: 0.1em 0.3em; display: inline-block; margin-bottom: 0.25rem;">Innovation that Matters,</span><br>
+                    <span style="background-color: #000000; padding: 0.1em 0.3em; display: inline-block;">Impact that Lasts.</span>
+                </h1>
+                <p class="mt-4 text-xl text-gray-300 font-light max-w-2xl mx-auto">
+                    <span style="background-color: #000000; padding: 0.05em 0.2em;">We de-risk the risky process of innovating. Mutiny Labs empowers industry leaders and non-profits to reimagine leadership in the AI era.</span>
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="px-6 sm:px-8 py-3 sm:py-4 bg-[#47E2B9] text-[#231F20] font-bold rounded-lg border-2 border-[#000000] shadow-[0_0_20px_rgba(71,226,185,0.4)] hover:shadow-[0_0_30px_rgba(71,226,185,0.6)] transition-all text-center">
+                        Let's Innovate
+                    </a>
+                    <a href="#about" class="px-6 sm:px-8 py-3 sm:py-4 bg-[#000000] border-2 border-[#000000] hover:border-white text-white rounded-lg transition-all text-center">
+                        Our Methodology
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="glitch-divider"></div>
+
+    <!-- Value Proposition -->
+    <section id="about" class="py-20 bg-[#1a1a22]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="p-8 border-l-4 border-[#535DA5] bg-[#121218] hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold text-white mb-4">Fractional CIO Expertise</h3>
+                    <p class="text-gray-400">
+                        Why hire a traditional firm? Get C-level strategy without the bloat. We offer fractional Chief Innovation Officer knowledge to disrupt traditional spaces.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 border-l-4 border-[#47E2B9] bg-[#121218] hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold text-white mb-4">AI-Driven Velocity</h3>
+                    <p class="text-gray-400">
+                        Speed is our currency. Our agile experts prototype AI solutions in days, not months, helping you outpace competitors and unlock new opportunities immediately.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 border-l-4 border-[#535DA5] bg-[#121218] hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-2xl font-bold text-white mb-4">Proven Impact</h3>
+                    <p class="text-gray-400">
+                        20+ years of track record working with Mozilla, Microsoft, and Toyota. We balance visionary thinking with practical, ethical execution.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Leader / Social Proof -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <!-- Gino's Portrait -->
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 flex-shrink-0">
+                    <div class="absolute inset-0 border-2 border-[#47E2B9] translate-x-4 translate-y-4"></div>
+                    <img src="ginoProfile.webp" alt="Juan C. Sánchez (Gino)" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <h2 class="text-[#47E2B9] text-sm font-bold tracking-widest uppercase mb-2">The Architect</h2>
+                <h3 class="text-4xl font-bold text-white mb-6">Juan C. Sánchez (Gino)</h3>
+                <p class="text-lg text-gray-300 mb-6">
+                    A digital strategist with over two decades of experience redefining the communications business. From breaking <strong>Guinness World Records</strong> with Mozilla to deploying global touch-apps for Hotel Indigo.
+                </p>
+                <p class="text-gray-400 mb-8">
+                    Gino combines the discipline of a veteran consultant with the heart of a hacker. Recognized by Ad Age, The Webby Awards, and Nielsen, he leads Mutiny Labs to bridge the gap between human creativity and AI excellence.
+                </p>
+                <div class="flex gap-4">
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-bold text-white">20+</span>
+                        <span class="text-sm text-[#47E2B9]">Years Exp.</span>
+                    </div>
+                    <div class="w-px bg-gray-700"></div>
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-bold text-white">Award</span>
+                        <span class="text-sm text-[#47E2B9]">Winning</span>
+                    </div>
+                    <div class="w-px bg-gray-700"></div>
+                    <div class="flex flex-col">
+                        <span class="text-3xl font-bold text-white">Global</span>
+                        <span class="text-sm text-[#47E2B9]">Reach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual Mission Section -->
+    <section class="py-20 bg-brand-gradient relative">
+        <!-- Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#47E2B9 1px, transparent 1px); background-size: 20px 20px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Two Worlds, One Mission</h2>
+            <p class="mt-4 text-[#80FFD8]">Technology is the great equalizer. We apply the same rigor to both sectors.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-8">
+            
+            <!-- Corporate Card -->
+            <div class="glass-card p-10 rounded-xl">
+                <div class="h-12 w-12 bg-white rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-[#535DA5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">Industry Leaders</h3>
+                <p class="text-gray-200 mb-6">
+                    For brands ready to disrupt. We design and execute rapid innovation initiatives powered by AI and agile methodology. Compress timelines from weeks to days, unlock new market opportunities, and stay ahead of the competition.
+                </p>
+                <ul class="text-sm text-gray-200 space-y-2">
+                    <li class="flex items-center"><span class="text-[#47E2B9] mr-2">✓</span> Rapid Prototyping & AI Integration</li>
+                    <li class="flex items-center"><span class="text-[#47E2B9] mr-2">✓</span> Data-Driven Loyalty Programs</li>
+                    <li class="flex items-center"><span class="text-[#47E2B9] mr-2">✓</span> De-risking Innovation</li>
+                </ul>
+            </div>
+
+            <!-- Non-Profit Card -->
+            <div class="glass-card p-10 rounded-xl border border-[#47E2B9]/40">
+                <div class="h-12 w-12 bg-[#47E2B9] rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-[#231F20]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">Social Impact & Culture</h3>
+                <p class="text-gray-200 mb-6">
+                    For organizations creating a difference. We empower non-profits in social justice and culture with AI-driven solutions that increase impact, amplify your mission, and preserve history with dignity. From smarter fundraising to immersive cultural platforms.
+                </p>
+                <ul class="text-sm text-gray-200 space-y-2">
+                    <li class="flex items-center"><span class="text-[#231F20] mr-2">✓</span> AI for Fundraising Efficiency</li>
+                    <li class="flex items-center"><span class="text-[#231F20] mr-2">✓</span> Content-Sensitive Platforms</li>
+                    <li class="flex items-center"><span class="text-[#231F20] mr-2">✓</span> Cultural Preservation Tech</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model / Services -->
+    <section class="py-20 bg-[#121218]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white">Our Engagement Model</h2>
+                <p class="text-gray-400 mt-2">Flexible frameworks designed for the speed of modern business.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-6 bg-[#1a1a22] rounded-lg hover:bg-[#231F20] border border-gray-800 transition-colors">
+                    <h4 class="text-[#47E2B9] font-bold text-lg mb-2">Projects</h4>
+                    <p class="text-sm text-gray-400">Fee for Service</p>
+                    <p class="text-xs text-gray-500 mt-2">Special Innovation Projects</p>
+                </div>
+                <div class="p-6 bg-[#1a1a22] rounded-lg hover:bg-[#231F20] border border-gray-800 transition-colors">
+                    <h4 class="text-[#47E2B9] font-bold text-lg mb-2">Consulting</h4>
+                    <p class="text-sm text-gray-400">Hourly / Retainer</p>
+                    <p class="text-xs text-gray-500 mt-2">Fractional CIO Services</p>
+                </div>
+                <div class="p-6 bg-[#1a1a22] rounded-lg hover:bg-[#231F20] border border-gray-800 transition-colors">
+                    <h4 class="text-[#47E2B9] font-bold text-lg mb-2">Insights</h4>
+                    <p class="text-sm text-gray-400">Subscription</p>
+                    <p class="text-xs text-gray-500 mt-2">Digital Products & Outreach</p>
+                </div>
+                <div class="p-6 bg-[#1a1a22] rounded-lg hover:bg-[#231F20] border border-gray-800 transition-colors">
+                    <h4 class="text-[#47E2B9] font-bold text-lg mb-2">Accelerator</h4>
+                    <p class="text-sm text-gray-400">Equity / ROI</p>
+                    <p class="text-xs text-gray-500 mt-2">Ventures & Partnerships</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Footer -->
+    <footer id="contact" class="bg-[#000000] pt-20 pb-10 border-t border-[#535DA5]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start">
+                <div class="mb-10 md:mb-0">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="logoM.png" alt="Mutiny Labs Logo" class="h-8 w-auto">
+                        <span class="text-2xl font-bold text-white">mutiny<span class="text-[#47E2B9]">.</span></span>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">
+                        Reimagining leadership in the AI era. 
+                        Fast, bold, and ethical.
+                    </p>
+                    <div class="mt-8">
+                        <a href="mailto:info@mutiny-labs.com" class="text-white hover:text-[#47E2B9] transition-colors block text-lg font-medium">info@mutiny-labs.com</a>
+                        <a href="tel:1-888-449-4466" class="text-gray-400 hover:text-white transition-colors block mt-2">1-888-449-4466</a>
+                    </div>
+                </div>
+
+                <div class="bg-[#121218] p-8 rounded-2xl border border-[#47E2B9]/30 w-full md:w-auto md:min-w-[400px]">
+                    <h3 class="text-2xl font-bold text-white mb-2">Ready to innovate?</h3>
+                    <p class="text-gray-400 mb-6 text-sm">Let's discuss how Mutiny Labs can accelerate your next big project.</p>
+                    <a href="https://form.jotform.com/form/250974566407062" target="_blank" class="block w-full text-center bg-[#47E2B9] text-[#231F20] font-bold py-3 px-6 rounded-lg hover:bg-white transition-colors">
+                        Start The Conversation
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+                <p>&copy; 2025 Mutiny Labs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
