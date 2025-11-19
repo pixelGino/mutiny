@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Mutiny Labs | Leadership & Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #FAF8F5 0%, #F0EBE5 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .bg-shape {
+            position: fixed;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            opacity: 0.4;
+            filter: blur(60px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .shape1 { width: 800px; height: 800px; background: linear-gradient(135deg, #D4A574 0%, #C89952 100%); top: -200px; right: -100px; }
+        .shape2 { width: 600px; height: 600px; background: linear-gradient(135deg, #8B70B0 0%, #7A5E9F 100%); bottom: 500px; left: -150px; }
+
+        header {
+            position: relative;
+            padding: 40px 120px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1F0F3D;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #6B4E9D;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #C856D7;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #C856D7 0%, #B845C6 100%) !important;
+            color: white !important;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(200, 86, 215, 0.3);
+        }
+
+        .page-header {
+            position: relative;
+            padding: 80px 120px;
+            z-index: 10;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 900;
+            color: #1F0F3D;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .page-subtitle {
+            font-size: 20px;
+            color: #7A6099;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        main {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 80px 120px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .story-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .story-content h2 {
+            font-size: 48px;
+            color: #1F0F3D;
+            font-weight: 900;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .story-content p {
+            font-size: 18px;
+            color: #7A6099;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .story-highlight {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(30px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            margin: 40px 0;
+            border-left: 5px solid #C856D7;
+        }
+
+        .story-highlight p {
+            font-size: 20px;
+            color: #1F0F3D;
+            font-weight: 600;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 80px 120px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .values-header h2 {
+            font-size: 48px;
+            color: #1F0F3D;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(30px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(107, 78, 157, 0.08);
+            transition: transform 0.4s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .value-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 24px;
+            color: #1F0F3D;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .value-card p {
+            font-size: 16px;
+            color: #7A6099;
+            line-height: 1.7;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            padding: 80px 120px;
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 40px 0;
+            border-top: 1px solid rgba(212, 165, 116, 0.2);
+            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        .leadership-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .leadership-header h2 {
+            font-size: 48px;
+            color: #1F0F3D;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+
+        .leader-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(30px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            box-shadow: 0 30px 80px rgba(107, 78, 157, 0.12);
+        }
+
+        .leader-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #C856D7 0%, #B845C6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(200, 86, 215, 0.3);
+        }
+
+        .leader-card h3 {
+            font-size: 28px;
+            color: #1F0F3D;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .leader-title {
+            font-size: 16px;
+            color: #C856D7;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .leader-bio {
+            font-size: 16px;
+            color: #7A6099;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .leader-highlights {
+            background: rgba(200, 86, 215, 0.1);
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .leader-highlights h4 {
+            font-size: 14px;
+            color: #1F0F3D;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .leader-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .leader-highlights li {
+            font-size: 14px;
+            color: #7A6099;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .leader-highlights li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C856D7;
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 120px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(200, 86, 215, 0.2) 0%, rgba(212, 165, 116, 0.2) 100%);
+            backdrop-filter: blur(40px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            font-size: 42px;
+            font-weight: 900;
+            color: #1F0F3D;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .cta-box p {
+            font-size: 18px;
+            color: #7A6099;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-cta {
+            background: linear-gradient(135deg, #6B4E9D 0%, #563D7E 100%);
+            color: white;
+            border: none;
+            padding: 18px 48px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(107, 78, 157, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #1F0F3D;
+            color: white;
+            padding: 60px 120px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 1024px) {
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .leadership-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 30px 20px; }
+            .page-header { padding: 40px 20px; }
+            h1 { font-size: 42px; }
+
+            .story-section { padding: 40px 20px; }
+            .story-content h2 { font-size: 32px; }
+            .story-content p { font-size: 16px; }
+
+            .values-section { padding: 40px 20px; }
+            .values-grid { grid-template-columns: 1fr; gap: 20px; }
+
+            .leadership-section { padding: 40px 20px; }
+            .leadership-grid { grid-template-columns: 1fr; gap: 30px; }
+
+            .cta-section { padding: 40px 20px; }
+            footer { padding: 40px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 20px 15px; }
+            .logo { font-size: 20px; }
+            .nav-links { gap: 10px; font-size: 12px; }
+            h1 { font-size: 32px; }
+            .page-header { padding: 30px 15px; }
+
+            .story-section { padding: 30px 15px; }
+            .story-content h2 { font-size: 28px; }
+            .story-content p { font-size: 14px; }
+
+            .values-section { padding: 30px 15px; }
+            .values-grid { grid-template-columns: 1fr; }
+
+            .leadership-section { padding: 30px 15px; }
+            .leader-card { padding: 30px 20px; }
+            .leader-card h3 { font-size: 22px; }
+
+            .cta-section { padding: 30px 15px; }
+            footer { padding: 30px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+
+    <header>
+        <nav>
+            <a href="mutiny-labs-website.html" class="logo">MUTINY LABS</a>
+            <div class="nav-links">
+                <a href="mutiny-labs-website.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Work</a>
+                <a href="mutiny-labs-website.html#contact" class="nav-cta">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>About Mutiny Labs</h1>
+        <p class="page-subtitle">Pioneering digital innovation and transformation for the world's boldest organizations since 2000.</p>
+    </section>
+
+    <main>
+        <!-- Story Section -->
+        <section class="story-section">
+            <div class="story-content">
+                <h2>Our Story</h2>
+                <p>
+                    Mutiny Labs was founded on a simple premise: innovation doesn't have to be risky. With over 20 years of digital transformation experience, we've spent our careers helping Fortune 500 companies and visionary organizations navigate the complex landscape of digital change.
+                </p>
+                <p>
+                    We've worked with some of the world's most iconic brands—from Mozilla to Toyota, from Microsoft to Bacardi. Along the way, we've learned what works, what doesn't, and most importantly, how to de-risk the risky process of innovating.
+                </p>
+                <div class="story-highlight">
+                    <p>"Innovation that matters requires courage, strategy, and the right partners. That's what we bring to every engagement."</p>
+                </div>
+                <p>
+                    Today, Mutiny Labs operates as more than just a consultancy. We're a full-service innovation partner offering digital strategy, experience design, development, growth optimization, digital transformation, and cutting-edge innovation lab services. Our six-revenue-stream model—from project work to equity investments—allows us to commit deeply to our clients' success.
+                </p>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="values-header">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Bold Innovation</h3>
+                    <p>We embrace ambitious ideas and have the courage to challenge the status quo, backed by strategic thinking and rigorous execution.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Client Partnership</h3>
+                    <p>Your success is our success. We commit to deep partnerships, moving at your pace while guiding you toward transformational results.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Expertise & Impact</h3>
+                    <p>With 20+ years of industry experience and proven methodologies, we deliver measurable impact across industries and challenges.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Sustainable Growth</h3>
+                    <p>We focus on building digital ecosystems that evolve with your business, creating lasting competitive advantages.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <h3>Data-Driven</h3>
+                    <p>Every decision is grounded in insights, analytics, and evidence. We measure, learn, and optimize continuously.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h3>Human-Centered</h3>
+                    <p>Great digital experiences start with understanding people. We design for users, not just systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class="leadership-section">
+            <div class="leadership-header">
+                <h2>Leadership</h2>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-avatar">👨‍💼</div>
+                    <h3>Juan C. Sánchez (Gino)</h3>
+                    <div class="leader-title">Founder & Chief Innovation Officer</div>
+                    <p class="leader-bio">
+                        With 25+ years of digital transformation and innovation leadership, Gino has guided hundreds of organizations through complex digital journeys. His work spans multiple industries and has generated over $2.4M in revenue for client projects, with a 98% satisfaction rate.
+                    </p>
+                    <p class="leader-bio">
+                        Gino holds deep expertise in digital strategy, innovation methodology, change management, and emerging technologies. His mission-driven approach has earned recognition including Webby Awards, Guinness World Records, and partnerships with industry leaders.
+                    </p>
+                    <div class="leader-highlights">
+                        <h4>Highlights</h4>
+                        <ul>
+                            <li>25+ years digital transformation experience</li>
+                            <li>450+ projects delivered</li>
+                            <li>$2.4M+ revenue generated</li>
+                            <li>98% client satisfaction rate</li>
+                            <li>20+ industries served</li>
+                            <li>Award-winning projects & methodologies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-avatar">🤖</div>
+                    <h3>Innovation Team</h3>
+                    <div class="leader-title">Digital Transformation Specialists</div>
+                    <p class="leader-bio">
+                        Our distributed team of strategists, designers, developers, and innovation specialists bring diverse expertise and perspectives to every challenge. We're united by a commitment to de-risking innovation and creating transformational digital experiences.
+                    </p>
+                    <p class="leader-bio">
+                        Each team member brings proven track records in their respective domains, from emerging technology implementation to large-scale digital transformation. We collaborate across industries and geographies to deliver world-class results.
+                    </p>
+                    <div class="leader-highlights">
+                        <h4>Team Capabilities</h4>
+                        <ul>
+                            <li>Digital Strategy & Roadmapping</li>
+                            <li>UX/UI Design & Research</li>
+                            <li>Full-Stack Development</li>
+                            <li>AI & Machine Learning</li>
+                            <li>Cloud Architecture & DevOps</li>
+                            <li>Change Management & Training</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2>Let's Transform Together</h2>
+                <p>Ready to de-risk your innovation journey? Our team is here to help you achieve transformational results.</p>
+                <button class="btn-cta" onclick="window.location.href='mutiny-labs-website.html#contact'">Schedule a Consultation</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mutiny Labs 2025 | Innovation that Matters, Impact that Lasts</p>
+    </footer>
+</body>
+</html>

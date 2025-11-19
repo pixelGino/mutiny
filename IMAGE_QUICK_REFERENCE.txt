@@ -1,0 +1,267 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                 MUTINY LABS WEBSITE - IMAGE QUICK REFERENCE                 ║
+║                          Ready for Implementation                            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🎨 BRAND COLORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary Purple:     #C856D7  ████████████████████████ Magenta
+Dark Purple:        #1F0F3D  ████ Navy (Text/Dark)
+Navy Purple:        #4a25c9  ████████████ Deep Purple
+Light Purple:       #8B70B0  ██████████████ Light
+Gold Accent:        #D4A574  ███████████████████ Gold
+Neutral:            #7A6099  ██████████ Muted Purple
+White:              #FFFFFF  ███████████████████████████ Clean
+
+📐 IMAGE SPECIFICATIONS SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PHASE 1: HIGH PRIORITY (13 Images - Start Here!)
+──────────────────────────────────────────────────
+
+🏠 HERO ECOSYSTEM ILLUSTRATION
+   Dimensions: 1200 x 800px
+   File Size: <150KB
+   Format: WebP + JPG fallback
+   Path: images/hero/hero-ecosystem.webp
+   Style: Abstract, modern, digital ecosystem
+   Colors: Purple #C856D7 + Gold #D4A574
+
+🎯 SERVICE CARD VISUALS (6 Images)
+   Each: 400 x 400px | <80KB | WebP/PNG
+   Paths: images/services/[name].webp
+   
+   1. digital-strategy.webp      → Purple #563D7E + Magenta
+   2. experience-design.webp     → Rose #C856D7 + Gold
+   3. development.webp           → Blue #4a25c9 + Purple
+   4. growth-scale.webp          → Gold #D4A574 + Orange
+   5. transformation.webp        → Cyan #8B70B0 + Purple
+   6. innovation-lab.webp        → Magenta #C856D7 + White
+
+👤 LEADERSHIP PHOTO
+   Dimensions: 300 x 300px
+   File Size: <100KB
+   Format: JPG
+   Path: images/about/gino-profile.jpg
+   Content: Professional headshot of Juan C. Sánchez (Gino)
+   Style: Warmth, confidence, professional
+
+📊 CASE STUDY VISUALS (5 Images)
+   Each: 500 x 400px | <100KB | WebP/PNG
+   Paths: images/work/case-[name].webp
+   
+   1. case-mozilla.webp          → Firefox Download Day
+   2. case-hotel-indigo.webp     → Global Hotel Deployment
+   3. case-banking.webp          → Digital Banking Platform
+   4. case-ecommerce.webp        → E-Commerce Optimization
+   5. case-youth.webp            → Youth Development Platform
+
+─────────────────────────────────────────────────────────────────────────────
+
+PHASE 2: MEDIUM PRIORITY (16 Images - Polish)
+──────────────────────────────────────────────
+
+💎 VALUES ICONS (6 Icons)
+   Each: 200 x 200px | <30KB | SVG/PNG
+   Paths: images/about/values-[name].svg
+   
+   1. values-innovation.svg      → 🚀 Rocket/Lightning
+   2. values-partnership.svg     → 🤝 Handshake/Connection
+   3. values-expertise.svg       → 🎯 Target/Achievement
+   4. values-growth.svg          → 🌱 Plant/Growth
+   5. values-data-driven.svg     → 📊 Chart/Analytics
+   6. values-human-centered.svg  → 👥 People/Connection
+
+📖 COMPANY STORY ILLUSTRATION
+   Dimensions: 1400 x 600px
+   File Size: <150KB
+   Format: WebP
+   Path: images/about/story-journey.webp
+   Content: 25-year journey/timeline visualization
+
+👥 TEAM AVATAR
+   Dimensions: 300 x 300px
+   File Size: <60KB
+   Format: PNG (transparent background)
+   Path: images/about/team-avatar.png
+   Content: Innovation Team visualization
+
+🏢 CLIENT LOGOS (8 Logos)
+   Each: 300 x 200px (or 200 x 200px) | <50KB | SVG/PNG
+   Paths: images/work/client-[name].svg
+   
+   1. client-microsoft.svg       → Microsoft (Blue mark)
+   2. client-mozilla.svg         → Mozilla (Firefox)
+   3. client-toyota.svg          → Toyota & Lexus
+   4. client-intercontinental.svg → Hotel Group
+   5. client-honda.svg           → Honda
+   6. client-bacardi.svg         → Bacardi
+   7. client-oriental-bank.svg   → Oriental Bank
+   8. client-tourism.svg         → Puerto Rico Tourism
+
+─────────────────────────────────────────────────────────────────────────────
+
+PHASE 3: NICE-TO-HAVE (3 Images - Polish)
+──────────────────────────────────────────
+
+🔖 FAVICON
+   Sizes: 16x16px, 32x32px, 180x180px
+   Format: ICO or PNG
+   Path: images/favicon.ico
+   Content: Mutiny Labs logo mark (simplified)
+
+🎯 LOGO SVG
+   Dimensions: 300x100px (horizontal) or 200x200px (square)
+   Format: SVG
+   Paths: images/logo-horizontal.svg, images/logo-square.svg
+   Content: "MUTINY LABS" + mark
+
+📋 FOLDER STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+images/
+├── hero/
+│   └── hero-ecosystem.webp
+├── services/
+│   ├── digital-strategy.webp
+│   ├── experience-design.webp
+│   ├── development.webp
+│   ├── growth-scale.webp
+│   ├── transformation.webp
+│   └── innovation-lab.webp
+├── about/
+│   ├── gino-profile.jpg
+│   ├── team-avatar.png
+│   ├── story-journey.webp
+│   ├── values-innovation.svg
+│   ├── values-partnership.svg
+│   ├── values-expertise.svg
+│   ├── values-growth.svg
+│   ├── values-data-driven.svg
+│   └── values-human-centered.svg
+└── work/
+    ├── case-mozilla.webp
+    ├── case-hotel-indigo.webp
+    ├── case-banking.webp
+    ├── case-ecommerce.webp
+    ├── case-youth.webp
+    ├── client-microsoft.svg
+    ├── client-mozilla.svg
+    ├── client-toyota.svg
+    ├── client-intercontinental.svg
+    ├── client-honda.svg
+    ├── client-bacardi.svg
+    ├── client-oriental-bank.svg
+    └── client-tourism.svg
+
+⚡ WEB OPTIMIZATION STANDARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Format Priority:
+  1. WebP (Primary - 25-34% smaller than JPG/PNG)
+  2. JPG (Fallback - for photos)
+  3. PNG (Fallback - for transparency)
+  4. SVG (Preferred - for logos/icons)
+
+DPI: 72 DPI (web standard only - pixel dimensions matter)
+
+File Size Targets:
+  • Hero images:     <150KB
+  • Card images:     <80KB
+  • Logo images:     <50KB
+  • Icon images:     <30KB
+  • Photos:          <100KB
+
+Aspect Ratios:
+  • Square:       1:1   (400x400px)
+  • Landscape:    16:9  or 5:4
+  • Portrait:     3:2   or 4:5
+  • Wide:         2.33:1
+
+📱 RESPONSIVE BREAKPOINTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Desktop:  1024px+ (120px padding)
+Tablet:   768-1024px (40px padding)
+Mobile:   <768px (20px padding)
+
+Images should work at:
+  • Hero: 1200px (desktop), 800px (tablet), 400px (mobile)
+  • Cards: 400px (desktop), 300px (tablet), 100% (mobile)
+
+🎯 IMPLEMENTATION TIMELINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Week 1: Design & Create Phase 1 (13 assets)
+          └─ Hero, Services (6), Leadership, Case Studies (5)
+
+Week 2: Create Phase 2 (16 assets)
+          └─ Icons (6), Story, Team Avatar, Logos (8)
+
+Week 3: Optimize & Integrate
+          └─ Compress, convert WebP, add to HTML, test
+
+Week 4: QA & Deploy
+          └─ Device testing, PageSpeed, Cloud Run deployment
+
+💰 BUDGET ESTIMATES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Option A (DIY):
+  Cost: $0 | Time: 30-40 hours | Tools: Figma Free, Canva
+
+Option B (Templates):
+  Cost: $120-300 | Time: 15-20 hours | Tools: Canva Pro
+
+Option C (Freelancer):
+  Cost: $500-1500 | Time: 1-3 weeks | Quality: Variable
+
+Option D (Agency):
+  Cost: $1500-3000 | Time: 2-4 weeks | Quality: Professional
+
+✅ QUALITY CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before deploying:
+  □ All dimensions are exact
+  □ File sizes under limits
+  □ Colors match brand palette
+  □ Format is correct
+  □ No compression artifacts
+  □ Professional quality
+  □ Consistent art direction
+  □ Works on all screen sizes
+  □ Alt text is descriptive
+  □ Responsive at 400-1200px
+  □ PageSpeed Insights score 90+
+
+📖 DOCUMENTATION FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+READ FIRST:
+  1. START_HERE.md                  ← Begin here for overview
+  2. IMAGE_SPECIFICATIONS.md        ← Technical specs for all images
+  3. IMAGE_INTEGRATION_GUIDE.md     ← HTML implementation steps
+  4. IMAGE_CREATION_CHECKLISTS.md   ← Quality control & design guide
+  5. COMPLETE_IMAGE_SUMMARY.md      ← Quick reference & budget
+
+EXISTING DOCS:
+  • README.md                       ← Website overview
+  • DEPLOYMENT_GUIDE.md             ← How to deploy
+  • mutiny-labs-claude-code-brief.md ← Original project brief
+
+🚀 NEXT STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Read IMAGE_SPECIFICATIONS.md (all specs)
+2. Create images folder structure
+3. Create/source Phase 1 images (13 assets)
+4. Optimize images (compress, convert WebP)
+5. Follow IMAGE_INTEGRATION_GUIDE.md
+6. Test locally in browser
+7. Run PageSpeed Insights
+8. Deploy: ./deploy.sh YOUR_PROJECT_ID
+
+═══════════════════════════════════════════════════════════════════════════════
+                    You're Ready to Add Images! 🎨
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutiny Labs - Liquid Ecosystem: Violet & Silver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #FCFCFD 0%, #F5F4F7 100%);
+            width: 1920px;
+            height: 4800px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Organic background shapes */
+        .bg-shape {
+            position: absolute;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            opacity: 0.35;
+            filter: blur(60px);
+        }
+
+        .shape1 {
+            width: 800px;
+            height: 800px;
+            background: linear-gradient(135deg, #A855F7 0%, #9644E8 100%);
+            top: -200px;
+            right: -100px;
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        .shape2 {
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, #C8C4D8 0%, #B3AEC8 100%);
+            bottom: 500px;
+            left: -150px;
+            animation: morph 10s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .shape3 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #E8E4F0 0%, #D8D2E6 100%);
+            top: 1200px;
+            right: 100px;
+            animation: morph 12s ease-in-out infinite;
+            animation-delay: 4s;
+        }
+
+        @keyframes morph {
+            0%, 100% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                transform: translate(20px, -20px) rotate(5deg);
+            }
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+                transform: translate(-20px, 20px) rotate(-5deg);
+            }
+            75% {
+                border-radius: 50% 40% 60% 50% / 40% 70% 50% 60%;
+                transform: translate(20px, 20px) rotate(3deg);
+            }
+        }
+
+        /* Header Section */
+        header {
+            position: relative;
+            padding: 60px 120px 0;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #3F0F5C;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #7C3AED;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #A855F7 0%, #9644E8 100%);
+            color: white !important;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 0 120px 120px;
+            z-index: 10;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 50px;
+            border: 1px solid rgba(200, 196, 216, 0.4);
+            color: #7C3AED;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 120px;
+            font-weight: 900;
+            color: #3F0F5C;
+            line-height: 1.1;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #A855F7 0%, #9644E8 50%, #7C3AED 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 24px;
+            color: #6B5E7F;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            max-width: 700px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            padding: 24px 48px;
+            background: linear-gradient(135deg, #7C3AED 0%, #6829D8 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.35);
+            transition: transform 0.3s;
+        }
+
+        .btn-secondary {
+            padding: 24px 48px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            color: #3F0F5C;
+            border: 2px solid rgba(200, 196, 216, 0.5);
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        /* Floating card in hero */
+        .hero-card {
+            position: absolute;
+            right: 120px;
+            top: 150px;
+            width: 500px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(40px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 30px 80px rgba(124, 58, 237, 0.12);
+            padding: 50px;
+            z-index: 5;
+        }
+
+        .hero-card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card h3 {
+            font-size: 28px;
+            color: #3F0F5C;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero-card p {
+            color: #6B5E7F;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .stats-mini {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(200, 196, 216, 0.3);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: #A855F7;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6B5E7F;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Services Section */
+        .services {
+            position: relative;
+            padding: 100px 120px;
+            z-index: 10;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            font-size: 14px;
+            color: #A892C8;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 72px;
+            font-weight: 900;
+            color: #3F0F5C;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .section-description {
+            font-size: 20px;
+            color: #6B5E7F;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(40px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.06);
+            transition: transform 0.4s;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #A855F7 0%, #9644E8 100%);
+            opacity: 0.08;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            filter: blur(40px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #A855F7 0%, #9644E8 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35);
+        }
+
+        .service-card h3 {
+            font-size: 28px;
+            color: #3F0F5C;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            color: #6B5E7F;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .service-link {
+            color: #A855F7;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Process Section */
+        .process {
+            position: relative;
+            padding: 100px 120px;
+            z-index: 10;
+        }
+
+        .process-container {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(40px);
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            padding: 80px;
+            box-shadow: 0 30px 80px rgba(124, 58, 237, 0.08);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 80px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #C8C4D8 0%, #B3AEC8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.5;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .step-title {
+            font-size: 24px;
+            color: #3F0F5C;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .step-description {
+            font-size: 15px;
+            color: #6B5E7F;
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats {
+            position: relative;
+            padding: 100px 120px;
+            z-index: 10;
+        }
+
+        .stats-container {
+            background: linear-gradient(135deg, #3F0F5C 0%, #5A1F7D 100%);
+            border-radius: 60px;
+            padding: 80px 100px;
+            box-shadow: 0 40px 100px rgba(63, 15, 92, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-container::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #A855F7 0%, #9644E8 100%);
+            opacity: 0.2;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            filter: blur(60px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-big {
+            text-align: center;
+        }
+
+        .stat-big-number {
+            font-size: 80px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .stat-big-label {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta {
+            position: relative;
+            padding: 100px 120px 120px;
+            z-index: 10;
+        }
+
+        .cta-container {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(232, 228, 240, 0.4) 100%);
+            backdrop-filter: blur(50px);
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            padding: 100px;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(124, 58, 237, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-container::before {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, #A855F7 0%, #E8E4F0 100%);
+            opacity: 0.15;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            filter: blur(80px);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-container h2 {
+            font-size: 68px;
+            font-weight: 900;
+            color: #3F0F5C;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+
+        .cta-container p {
+            font-size: 22px;
+            color: #6B5E7F;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-form {
+            display: flex;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+
+        .cta-input {
+            flex: 1;
+            padding: 24px 32px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(200, 196, 216, 0.5);
+            border-radius: 50px;
+            font-size: 16px;
+            color: #3F0F5C;
+        }
+
+        /* Color Palette Display */
+        .color-palette {
+            position: absolute;
+            bottom: 80px;
+            left: 120px;
+            right: 120px;
+            z-index: 100;
+        }
+
+        .palette-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #3F0F5C;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .palette-colors {
+            display: flex;
+            gap: 20px;
+        }
+
+        .color-swatch {
+            flex: 1;
+            height: 120px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .color-name {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .color-code {
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .color1 {
+            background: linear-gradient(135deg, #7C3AED 0%, #6829D8 100%);
+            color: white;
+        }
+
+        .color2 {
+            background: linear-gradient(135deg, #E8E4F0 0%, #D8D2E6 100%);
+            color: #3F0F5C;
+        }
+
+        .color3 {
+            background: linear-gradient(135deg, #A855F7 0%, #9644E8 100%);
+            color: white;
+        }
+
+        .color4 {
+            background: linear-gradient(135deg, #3F0F5C 0%, #2A0A3E 100%);
+            color: white;
+        }
+
+        .color5 {
+            background: linear-gradient(135deg, #C8C4D8 0%, #B3AEC8 100%);
+            color: #3F0F5C;
+        }
+
+        .color6 {
+            background: linear-gradient(135deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+            color: #3F0F5C;
+            border: 2px solid rgba(200, 196, 216, 0.4);
+        }
+
+        /* Typography Showcase */
+        .typography-showcase {
+            position: absolute;
+            top: 4200px;
+            left: 120px;
+            right: 120px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(40px);
+            border-radius: 40px;
+            padding: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+        }
+
+        .typo-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #3F0F5C;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .typo-samples {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .typo-sample h2 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #3F0F5C;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .typo-sample h3 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #3F0F5C;
+            margin-bottom: 8px;
+        }
+
+        .typo-sample p {
+            font-size: 16px;
+            color: #6B5E7F;
+            line-height: 1.6;
+        }
+
+        .typo-sample .body-large {
+            font-size: 20px;
+            color: #6B5E7F;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background organic shapes -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">MUTINY LABS</div>
+            <div class="nav-links">
+                <a href="#">Services</a>
+                <a href="#">Work</a>
+                <a href="#">About</a>
+                <a href="#">Insights</a>
+                <a href="#" class="nav-cta">Let's Talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">DIGITAL INNOVATION PARTNERS</span>
+            <h1>
+                Transform<br/>
+                Your Digital<br/>
+                <span class="gradient-text">Ecosystem</span>
+            </h1>
+            <p class="hero-description">
+                We cultivate growth through human-centered design, innovative technology, and strategic thinking that evolves with your business.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Start Your Journey</button>
+                <button class="btn-secondary">Explore Our Work</button>
+            </div>
+        </div>
+
+        <!-- Floating stats card -->
+        <div class="hero-card">
+            <div class="hero-card-content">
+                <h3>Growing Together</h3>
+                <p>Building digital solutions that adapt, evolve, and flourish in today's dynamic landscape.</p>
+                <div class="stats-mini">
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Industries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="section-header">
+            <div class="section-tag">What We Cultivate</div>
+            <h2 class="section-title">Services That Grow<br/>With Your Vision</h2>
+            <p class="section-description">
+                From strategy to execution, we nurture every aspect of your digital presence with care and expertise.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Digital Strategy</h3>
+                <p>We plant the seeds of success with comprehensive strategies rooted in data, insight, and innovation.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Experience Design</h3>
+                <p>Crafting intuitive, beautiful interfaces that naturally connect users with your brand and products.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Development</h3>
+                <p>Building robust, scalable solutions using cutting-edge technology and best practices that stand the test of time.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Growth & Scale</h3>
+                <p>Nurturing your digital products from launch to maturity with continuous optimization and support.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔄</div>
+                <h3>Transformation</h3>
+                <p>Guiding organizations through digital evolution with change management and modernization expertise.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>Innovation Lab</h3>
+                <p>Exploring emerging technologies and experimental approaches to solve tomorrow's challenges today.</p>
+                <a href="#" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="process-container">
+            <div class="section-header">
+                <div class="section-tag">Our Approach</div>
+                <h2 class="section-title">An Organic Process<br/>for Lasting Impact</h2>
+                <p class="section-description">
+                    Like nature itself, great digital experiences require patience, care, and the right environment to thrive.
+                </p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Discover & Root</h3>
+                    <p class="step-description">We dig deep to understand your business, users, and goals through research and discovery.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Design & Grow</h3>
+                    <p class="step-description">Iterative design processes that allow ideas to develop naturally and evolve based on feedback.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Build & Bloom</h3>
+                    <p class="step-description">Bringing designs to life with clean, scalable code and rigorous testing for quality assurance.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Nurture & Scale</h3>
+                    <p class="step-description">Ongoing support and optimization to ensure continued growth and adaptation to changing needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-big">
+                    <div class="stat-big-number">150+</div>
+                    <div class="stat-big-label">Projects Delivered</div>
+                </div>
+                <div class="stat-big">
+                    <div class="stat-big-number">$2.4M</div>
+                    <div class="stat-big-label">Revenue Generated</div>
+                </div>
+                <div class="stat-big">
+                    <div class="stat-big-number">98%</div>
+                    <div class="stat-big-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-big">
+                    <div class="stat-big-number">12yr</div>
+                    <div class="stat-big-label">Industry Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Ready to Grow<br/>Something Great?</h2>
+                <p>Let's cultivate a digital experience that transforms your business and delights your customers.</p>
+                <div class="cta-form">
+                    <input type="email" class="cta-input" placeholder="Enter your email">
+                    <button class="btn-primary">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <div class="color-palette">
+        <div class="palette-title">PALETTE 3: Violet & Silver</div>
+        <div class="palette-colors">
+            <div class="color-swatch color1">
+                <div class="color-name">Violet</div>
+                <div class="color-code">#7C3AED</div>
+            </div>
+            <div class="color-swatch color2">
+                <div class="color-name">Soft Silver</div>
+                <div class="color-code">#E8E4F0</div>
+            </div>
+            <div class="color-swatch color3">
+                <div class="color-name">Electric Violet</div>
+                <div class="color-code">#A855F7</div>
+            </div>
+            <div class="color-swatch color4">
+                <div class="color-name">Deep Violet</div>
+                <div class="color-code">#3F0F5C</div>
+            </div>
+            <div class="color-swatch color5">
+                <div class="color-name">Silver Purple</div>
+                <div class="color-code">#C8C4D8</div>
+            </div>
+            <div class="color-swatch color6">
+                <div class="color-name">Pure White</div>
+                <div class="color-code">#FFFFFF</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typography Showcase -->
+    <div class="typography-showcase">
+        <div class="typo-title">Typography System</div>
+        <div class="typo-samples">
+            <div class="typo-sample">
+                <h2>Display Heading</h2>
+                <p>900 weight / -2px spacing</p>
+            </div>
+            <div class="typo-sample">
+                <h3>Section Heading</h3>
+                <p>800 weight / -1px spacing</p>
+            </div>
+            <div class="typo-sample">
+                <p class="body-large">Body Large Text - Used for hero descriptions and important body copy that needs emphasis.</p>
+            </div>
+            <div class="typo-sample">
+                <p>Body Text - Standard paragraph text with comfortable line height of 1.6 for optimal readability across all devices.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

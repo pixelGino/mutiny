@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Mutiny Labs - Case Studies & Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #FAF8F5 0%, #F0EBE5 100%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .bg-shape {
+            position: fixed;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            opacity: 0.4;
+            filter: blur(60px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .shape1 { width: 800px; height: 800px; background: linear-gradient(135deg, #D4A574 0%, #C89952 100%); top: -200px; right: -100px; }
+        .shape2 { width: 600px; height: 600px; background: linear-gradient(135deg, #8B70B0 0%, #7A5E9F 100%); bottom: 500px; left: -150px; }
+
+        header {
+            position: relative;
+            padding: 40px 120px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1F0F3D;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #6B4E9D;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #C856D7;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #C856D7 0%, #B845C6 100%) !important;
+            color: white !important;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(200, 86, 215, 0.3);
+        }
+
+        .page-header {
+            position: relative;
+            padding: 80px 120px;
+            z-index: 10;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 900;
+            color: #1F0F3D;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .page-subtitle {
+            font-size: 20px;
+            color: #7A6099;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        main {
+            position: relative;
+            z-index: 10;
+        }
+
+        .work-section {
+            padding: 80px 120px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .case-study {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(30px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 60px rgba(107, 78, 157, 0.08);
+            transition: transform 0.4s;
+        }
+
+        .case-study:hover {
+            transform: translateY(-4px);
+        }
+
+        .case-study.reverse {
+            direction: rtl;
+        }
+
+        .case-study.reverse > * {
+            direction: ltr;
+        }
+
+        .case-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .case-visual {
+            font-size: 100px;
+            text-align: center;
+        }
+
+        .case-title {
+            font-size: 42px;
+            color: #1F0F3D;
+            font-weight: 900;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .case-client {
+            font-size: 14px;
+            color: #D4A574;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .case-description {
+            font-size: 16px;
+            color: #7A6099;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .metric {
+            background: rgba(200, 86, 215, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: #C856D7;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #7A6099;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .tag {
+            background: rgba(200, 86, 215, 0.2);
+            color: #6B4E9D;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .clients-section {
+            padding: 80px 120px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .clients-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .clients-header h2 {
+            font-size: 48px;
+            color: #1F0F3D;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .client-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(30px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        .client-logo {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .client-name {
+            font-size: 16px;
+            color: #1F0F3D;
+            font-weight: 800;
+        }
+
+        .cta-section {
+            padding: 80px 120px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(200, 86, 215, 0.2) 0%, rgba(212, 165, 116, 0.2) 100%);
+            backdrop-filter: blur(40px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            padding: 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            font-size: 42px;
+            font-weight: 900;
+            color: #1F0F3D;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .cta-box p {
+            font-size: 18px;
+            color: #7A6099;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-cta {
+            background: linear-gradient(135deg, #6B4E9D 0%, #563D7E 100%);
+            color: white;
+            border: none;
+            padding: 18px 48px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(107, 78, 157, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #1F0F3D;
+            color: white;
+            padding: 60px 120px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        @media (max-width: 1024px) {
+            .case-header { grid-template-columns: 1fr; }
+            .case-metrics { grid-template-columns: repeat(2, 1fr); }
+            .clients-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 30px 20px; }
+            .page-header { padding: 40px 20px; }
+            h1 { font-size: 42px; }
+
+            .work-section { padding: 40px 20px; }
+            .case-study { padding: 30px 20px; }
+            .case-title { font-size: 28px; }
+
+            .clients-section { padding: 40px 20px; }
+            .clients-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+            .cta-section { padding: 40px 20px; }
+            footer { padding: 40px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 20px 15px; }
+            .logo { font-size: 20px; }
+            .nav-links { gap: 10px; font-size: 12px; }
+            h1 { font-size: 32px; }
+            .page-header { padding: 30px 15px; }
+
+            .work-section { padding: 30px 15px; }
+            .case-study { padding: 20px 15px; }
+            .case-header { gap: 20px; }
+            .case-title { font-size: 24px; }
+            .case-metrics { grid-template-columns: 1fr; }
+
+            .clients-section { padding: 30px 15px; }
+            .clients-grid { grid-template-columns: 1fr; }
+
+            .cta-section { padding: 30px 15px; }
+            footer { padding: 30px 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+
+    <header>
+        <nav>
+            <a href="mutiny-labs-website.html" class="logo">MUTINY LABS</a>
+            <div class="nav-links">
+                <a href="mutiny-labs-website.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Work</a>
+                <a href="mutiny-labs-website.html#contact" class="nav-cta">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Our Work</h1>
+        <p class="page-subtitle">Award-winning projects and case studies showcasing digital transformation and innovation across leading global organizations.</p>
+    </section>
+
+    <main>
+        <section class="work-section">
+            <!-- Case Study 1: Mozilla Firefox -->
+            <div class="case-study">
+                <div class="case-header">
+                    <div>
+                        <div class="case-client">01 / Browser Innovation</div>
+                        <h2 class="case-title">Mozilla Firefox Download Day</h2>
+                        <p class="case-description">
+                            We partnered with Mozilla to orchestrate the Mozilla Firefox Download Day, a global initiative to set a world record for the most software downloads in 24 hours. Through strategic digital marketing, viral campaign mechanics, and user engagement optimization, we helped achieve this landmark milestone.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-number">🏆</div>
+                                <div class="metric-label">Webby Award</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">🌍</div>
+                                <div class="metric-label">Guinness Record</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">8.02M</div>
+                                <div class="metric-label">Downloads in 24hrs</div>
+                            </div>
+                        </div>
+                        <div class="case-tags">
+                            <span class="tag">Digital Strategy</span>
+                            <span class="tag">Viral Marketing</span>
+                            <span class="tag">Campaign Management</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                    <div class="case-visual">🦊</div>
+                </div>
+            </div>
+
+            <!-- Case Study 2: Hotel Indigo -->
+            <div class="case-study reverse">
+                <div class="case-header">
+                    <div class="case-visual">🏨</div>
+                    <div>
+                        <div class="case-client">02 / Hospitality Transformation</div>
+                        <h2 class="case-title">Hotel Indigo Global Deployment</h2>
+                        <p class="case-description">
+                            We led a comprehensive digital transformation initiative for Hotel Indigo, launching a global guest experience platform across 60+ properties in 40+ countries. The solution modernized booking systems, guest communications, and property management while maintaining brand consistency across all touchpoints.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-number">60+</div>
+                                <div class="metric-label">Global Properties</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">40+</div>
+                                <div class="metric-label">Countries Deployed</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">99.9%</div>
+                                <div class="metric-label">Uptime SLA</div>
+                            </div>
+                        </div>
+                        <div class="case-tags">
+                            <span class="tag">Platform Development</span>
+                            <span class="tag">Global Deployment</span>
+                            <span class="tag">UX Design</span>
+                            <span class="tag">Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 3: Financial Services Digital Transformation -->
+            <div class="case-study">
+                <div class="case-header">
+                    <div>
+                        <div class="case-client">03 / Financial Services</div>
+                        <h2 class="case-title">Digital Banking Platform Modernization</h2>
+                        <p class="case-description">
+                            We modernized a legacy banking platform for a major financial institution, replacing outdated systems with a cloud-native, mobile-first architecture. The transformation improved user experience, reduced operational costs by 35%, and increased digital adoption rates by 3x within the first year.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-number">35%</div>
+                                <div class="metric-label">Cost Reduction</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">3x</div>
+                                <div class="metric-label">Adoption Growth</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">2M+</div>
+                                <div class="metric-label">Active Users</div>
+                            </div>
+                        </div>
+                        <div class="case-tags">
+                            <span class="tag">Cloud Migration</span>
+                            <span class="tag">Mobile App</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+                    <div class="case-visual">💳</div>
+                </div>
+            </div>
+
+            <!-- Case Study 4: E-Commerce Optimization -->
+            <div class="case-study reverse">
+                <div class="case-header">
+                    <div class="case-visual">🛍️</div>
+                    <div>
+                        <div class="case-client">04 / Retail Innovation</div>
+                        <h2 class="case-title">E-Commerce Platform & Growth Optimization</h2>
+                        <p class="case-description">
+                            We redesigned and optimized an e-commerce platform for a leading retail brand, implementing advanced personalization, A/B testing infrastructure, and conversion optimization strategies. The comprehensive digital transformation resulted in record-breaking sales growth and customer lifetime value improvements.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-number">422%</div>
+                                <div class="metric-label">ROI Generated</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">45%</div>
+                                <div class="metric-label">Conversion Lift</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">2.8x</div>
+                                <div class="metric-label">Customer LTV</div>
+                            </div>
+                        </div>
+                        <div class="case-tags">
+                            <span class="tag">CRO</span>
+                            <span class="tag">Personalization</span>
+                            <span class="tag">A/B Testing</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 5: Youth Development Portal -->
+            <div class="case-study">
+                <div class="case-header">
+                    <div>
+                        <div class="case-client">05 / Social Impact</div>
+                        <h2 class="case-title">Youth Development & Engagement Platform</h2>
+                        <p class="case-description">
+                            We developed a comprehensive digital platform for a nonprofit organization focused on youth development and career mentorship. The platform connects thousands of young professionals with experienced mentors, delivering measurable impact on career outcomes and personal growth trajectories.
+                        </p>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-number">50K+</div>
+                                <div class="metric-label">Active Users</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">25K+</div>
+                                <div class="metric-label">Mentorships Active</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">89%</div>
+                                <div class="metric-label">Success Rate</div>
+                            </div>
+                        </div>
+                        <div class="case-tags">
+                            <span class="tag">Platform Development</span>
+                            <span class="tag">Community Building</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">Impact Measurement</span>
+                        </div>
+                    </div>
+                    <div class="case-visual">👥</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="clients-section">
+            <div class="clients-header">
+                <h2>Featured Clients</h2>
+            </div>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-logo">🔵</div>
+                    <div class="client-name">Microsoft</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🦊</div>
+                    <div class="client-name">Mozilla</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🚗</div>
+                    <div class="client-name">Toyota & Lexus</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🏨</div>
+                    <div class="client-name">Intercontinental</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🏍️</div>
+                    <div class="client-name">Honda</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🥃</div>
+                    <div class="client-name">Bacardi</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">🏦</div>
+                    <div class="client-name">Oriental Bank</div>
+                </div>
+                <div class="client-card">
+                    <div class="client-logo">✈️</div>
+                    <div class="client-name">Tourism Board</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2>Ready to Create Your Success Story?</h2>
+                <p>Let's discuss how Mutiny Labs can help your organization achieve transformational results and competitive advantage.</p>
+                <button class="btn-cta" onclick="window.location.href='mutiny-labs-website.html#contact'">Start Your Project</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mutiny Labs 2025 | Innovation that Matters, Impact that Lasts</p>
+    </footer>
+</body>
+</html>
