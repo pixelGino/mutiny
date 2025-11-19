@@ -1,0 +1,23 @@
+# Git ignore unnecessary files
+.DS_Store
+*.pdf
+*.key
+*.zip
+*.mp4
+*.py
+*.md
+*.docx
+Dockerfile
+deploy.sh
+files/
+images/
+.venv/
+*.html.bak
+theme*
+about.html
+services.html
+work.html
+mutiny_logo.png
+ginoProfile.webp
+textured.png
+
